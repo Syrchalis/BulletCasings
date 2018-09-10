@@ -19,18 +19,21 @@ namespace BulletCasingMote
         {
             if (__instance.verbProps.muzzleFlashScale > 0.01f && __instance.verbProps.verbClass != typeof(Verb_ShootOneUse))
             {
-                if (__instance.CasterPawn.equipment.Primary.def.defName.Contains("Charge", StringComparison.OrdinalIgnoreCase))
+                if (__instance.CasterIsPawn)
                 {
-                    ThrowCasing(__instance.CasterPawn, __instance.caster.Map, __instance.GetProjectile().projectile.GetDamageAmount(1f), BulletCasingMoteDefOf.Mote_BulletCasing_Charge);
+                    if (__instance.CasterPawn.equipment.Primary.def.defName.Contains("Charge", StringComparison.OrdinalIgnoreCase))
+                    {
+                        ThrowCasing(__instance.CasterPawn, __instance.caster.Map, __instance.GetProjectile().projectile.GetDamageAmount(1f), BulletCasingMoteDefOf.Mote_BulletCasing_Charge);
+                    }
+                    else if (__instance.CasterPawn.equipment.Primary.def.defName.Contains("Shotgun", StringComparison.OrdinalIgnoreCase))
+                    {
+                        ThrowCasing(__instance.CasterPawn, __instance.caster.Map, __instance.GetProjectile().projectile.GetDamageAmount(1f), BulletCasingMoteDefOf.Mote_BulletCasing_Shotgun);
+                    }
+                    else
+                    {
+                        ThrowCasing(__instance.CasterPawn, __instance.caster.Map, __instance.GetProjectile().projectile.GetDamageAmount(1f), BulletCasingMoteDefOf.Mote_BulletCasing);
+                    }
                 }
-                else if (__instance.CasterPawn.equipment.Primary.def.defName.Contains("Shotgun", StringComparison.OrdinalIgnoreCase))
-                {
-                    ThrowCasing(__instance.CasterPawn, __instance.caster.Map, __instance.GetProjectile().projectile.GetDamageAmount(1f), BulletCasingMoteDefOf.Mote_BulletCasing_Shotgun);
-                }
-                else
-                {
-                    ThrowCasing(__instance.CasterPawn, __instance.caster.Map, __instance.GetProjectile().projectile.GetDamageAmount(1f), BulletCasingMoteDefOf.Mote_BulletCasing);
-                } 
             } 
         }
 
