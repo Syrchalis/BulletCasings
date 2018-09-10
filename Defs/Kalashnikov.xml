@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_SyrKalashnikov</defName>
+    <label>AK 47</label>
+    <description>A general-purpose gas-operated assault rifle for field or urban combat - this is the most popular assault rifle on the planet earth. It's popularity is based on it's reliability, easy-of-use and low mass-production cost.
+	
+Producing single rifles at a machining table requires a lot of materials, but provides a versatile low-tech alternative for the assault rifle, which can be operated by unskilled shooters effectively at short range. Proficient shooters can make use of it's full range, especially if the gun is of good quality.
+	
+Original name: Автома́т Кала́шникова which translates to Kalashnikov's Automatic Rifle</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/SyrKalashnikov</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>4.8</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.75</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+	  <WoodLog>30</WoodLog>
+      <Steel>60</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_SyrKalashnikov</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>29</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>Shot_SyrKalashnikov</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_SyrKalashnikov</defName>
+    <label>AK 47 bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
+  
+  <SoundDef>
+    <defName>Shot_SyrKalashnikov</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>4</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Weapon/SyrKalashnikov</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>13</min>        
+          <max>17</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.7</min>        
+          <max>0.8</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_BulletCasing</defName>
+	<thingClass>BulletCasingMote.MoteThrownCasing</thingClass>
+    <graphicData>
+      <texPath>Things/Mote/BulletCasing_Mote</texPath>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <mote>
+      <solidTime>0.5</solidTime>
+      <fadeOutTime>0.5</fadeOutTime>
+    </mote>
+  </ThingDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_BulletCasing_Charge</defName>
+	<thingClass>BulletCasingMote.MoteThrownCasing</thingClass>
+    <graphicData>
+      <texPath>Things/Mote/BulletCasing_Mote_Charge</texPath>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <mote>
+      <solidTime>0.5</solidTime>
+      <fadeOutTime>0.5</fadeOutTime>
+    </mote>
+  </ThingDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_BulletCasing_Shotgun</defName>
+	<thingClass>BulletCasingMote.MoteThrownCasing</thingClass>
+    <graphicData>
+      <texPath>Things/Mote/BulletCasing_Mote_Shotgun</texPath>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <mote>
+      <solidTime>0.5</solidTime>
+      <fadeOutTime>0.5</fadeOutTime>
+    </mote>
+  </ThingDef>
+  
+</Defs>

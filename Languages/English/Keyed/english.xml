@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<BulletCasingMoteSettingsCategory>Bullet Casings Settings</BulletCasingMoteSettingsCategory>
+	<BulletCasingVelocityFactor>Factor at which the casings fly away</BulletCasingVelocityFactor>
+	<BulletCasingUseWeaponRotation>Use weapon rotation to determine casing direction</BulletCasingUseWeaponRotation>
+	<BulletCasingUseWeaponRotationTooltip>If on the casings will fly depending on the rotation of the pawn and where he/she is aiming (like top-down view). If off the casings will always fly to the right side and down (like side view).</BulletCasingUseWeaponRotationTooltip>
+
+</LanguageData>
