@@ -7,11 +7,11 @@
 			<statBases>
 			  <WorkToMake>40000</WorkToMake>
 			  <Mass>3.5</Mass>
-			  <AccuracyTouch>0.65</AccuracyTouch>
-			  <AccuracyShort>0.75</AccuracyShort>
+			  <AccuracyTouch>0.60</AccuracyTouch>
+			  <AccuracyShort>0.70</AccuracyShort>
 			  <AccuracyMedium>0.70</AccuracyMedium>
 			  <AccuracyLong>0.55</AccuracyLong>
-			  <RangedWeapon_Cooldown>1.50</RangedWeapon_Cooldown>
+			  <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
 			</statBases>
 		  </value>
 	</Operation>
@@ -19,7 +19,14 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName = "Gun_AssaultRifle"]/verbs/li[1]/range</xpath>
 		  <value>
-			<range>32</range>
+			<range>32.9</range>
+		  </value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName = "Gun_AssaultRifle"]/verbs/li[1]/warmupTime</xpath>
+		  <value>
+			<warmupTime>0.75</warmupTime>
 		  </value>
 	</Operation>
 	
@@ -36,7 +43,7 @@
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName = "Bullet_AssaultRifle"]/projectile/damageAmountBase</xpath>
 		  <value>
-			<damageAmountBase>12</damageAmountBase>
+			<damageAmountBase>8</damageAmountBase>
 		  </value>
 	</Operation>
 

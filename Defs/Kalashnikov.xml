@@ -22,17 +22,17 @@ Original name: Автома́т Кала́шникова which translates to Kal
       </skillRequirements>
     </recipeMaker>
     <statBases>
-      <WorkToMake>30000</WorkToMake>
+      <WorkToMake>27000</WorkToMake>
       <Mass>4.8</Mass>
       <AccuracyTouch>0.70</AccuracyTouch>
-      <AccuracyShort>0.75</AccuracyShort>
-      <AccuracyMedium>0.60</AccuracyMedium>
-      <AccuracyLong>0.40</AccuracyLong>
-      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>1.75</RangedWeapon_Cooldown>
     </statBases>
     <costList>
-	  <WoodLog>30</WoodLog>
-      <Steel>60</Steel>
+	  <WoodLog>40</WoodLog>
+      <Steel>50</Steel>
       <ComponentIndustrial>5</ComponentIndustrial>
     </costList>
     <verbs>
@@ -40,9 +40,9 @@ Original name: Автома́т Кала́шникова which translates to Kal
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_SyrKalashnikov</defaultProjectile>
-        <warmupTime>1.5</warmupTime>
-        <range>29</range>
-        <burstShotCount>5</burstShotCount>
+        <warmupTime>1.25</warmupTime>
+        <range>28.9</range>
+        <burstShotCount>4</burstShotCount>
         <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
         <soundCast>Shot_SyrKalashnikov</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
@@ -78,7 +78,7 @@ Original name: Автома́т Кала́шникова which translates to Kal
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>8</damageAmountBase>
+      <damageAmountBase>12</damageAmountBase>
       <speed>60</speed>
     </projectile>
   </ThingDef>
