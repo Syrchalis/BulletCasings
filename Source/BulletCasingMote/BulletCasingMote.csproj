@@ -52,7 +52,9 @@
     <Compile Include="BulletCasingMoteDefOf.cs" />
     <Compile Include="BulletCasingMoteSettings.cs" />
     <Compile Include="BulletCasingMote.cs" />
+    <Compile Include="Listing_Syrchalis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settingshelper.cs" />
     <Compile Include="TryCastNextBurstShotPatch.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
