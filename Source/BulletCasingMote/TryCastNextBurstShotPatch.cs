@@ -42,7 +42,7 @@ namespace BulletCasingMote
                         FilthMaker.MakeFilth(randomCell, __instance.caster.Map, filth);
                     }
                 }
-                else
+                else if (__instance.caster.def != ThingDefOf.Turret_Mortar)
                 {
                     ThrowCasingTurret(__instance.caster, __instance.caster.Map, __instance.GetProjectile().projectile.GetDamageAmount(1f), BulletCasingMoteDefOf.Mote_BulletCasing);
                 }
