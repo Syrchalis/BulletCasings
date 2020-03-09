@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace BulletCasingMote
         public BulletCasingMote(ModContentPack content) : base(content)
         {
             settings = GetSettings<BulletCasingMoteSettings>();
-            var harmony = HarmonyInstance.Create("Syrchalis.Rimworld.BulletCasingMote");
+            var harmony = new Harmony("Syrchalis.Rimworld.BulletCasingMote");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
 
