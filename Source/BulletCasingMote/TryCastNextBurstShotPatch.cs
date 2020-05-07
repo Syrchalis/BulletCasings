@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +39,7 @@ namespace BulletCasingMote
                     if (Rand.Value > 0.9f && BulletCasingMoteSettings.filth)
                     {
                         IntVec3 randomCell = new IntVec3(Rand.Range(__instance.caster.Position.x - 1, __instance.caster.Position.x + 1), 0, Rand.Range(__instance.caster.Position.z - 1, __instance.caster.Position.z + 1));
-                        FilthMaker.MakeFilth(randomCell, __instance.caster.Map, filth);
+                        FilthMaker.TryMakeFilth(randomCell, __instance.caster.Map, filth);
                     }
                 }
                 else if (__instance.caster.def != ThingDefOf.Turret_Mortar)
