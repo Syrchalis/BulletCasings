@@ -17,7 +17,7 @@ namespace BulletCasingMote
         [HarmonyPostfix]
         public static void TryCastNextBurstShot_Postfix(Verb __instance)
         {
-            if (__instance.verbProps.muzzleFlashScale > 0.01f && __instance.verbProps.verbClass != typeof(Verb_ShootOneUse))
+            if (__instance?.verbProps != null &&__instance.verbProps.muzzleFlashScale > 0.01f && __instance.verbProps.verbClass != typeof(Verb_ShootOneUse))
             {
                 if (__instance.CasterIsPawn)
                 {
@@ -42,7 +42,7 @@ namespace BulletCasingMote
                         FilthMaker.TryMakeFilth(randomCell, __instance.caster.Map, filth);
                     }
                 }
-                else if (__instance.caster.def != ThingDefOf.Turret_Mortar)
+                else if (__instance.caster != null && __instance.caster.def != ThingDefOf.Turret_Mortar)
                 {
                     ThrowCasingTurret(__instance.caster, __instance.caster.Map, __instance.GetProjectile().projectile.GetDamageAmount(1f), BulletCasingMoteDefOf.Mote_BulletCasing);
                 }
