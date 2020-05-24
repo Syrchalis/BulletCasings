@@ -17,9 +17,9 @@ namespace BulletCasingMote
         [HarmonyPostfix]
         public static void TryCastNextBurstShot_Postfix(Verb __instance)
         {
-            if (__instance?.verbProps != null &&__instance.verbProps.muzzleFlashScale > 0.01f && __instance.verbProps.verbClass != typeof(Verb_ShootOneUse))
+            if (__instance?.verbProps != null && __instance.EquipmentSource != null &&__instance.verbProps.muzzleFlashScale > 0.01f && __instance.verbProps.verbClass != typeof(Verb_ShootOneUse))
             {
-                if (__instance.CasterIsPawn)
+                if (__instance.CasterPawn != null && __instance.GetProjectile()?.projectile != null && __instance.CasterIsPawn)
                 {
                     ThingDef filth = BulletCasingMoteDefOf.Filth_BulletCasingsCharge;
                     if (__instance.CasterPawn.equipment.Primary.def.defName.Contains("Charge", StringComparison.OrdinalIgnoreCase))
